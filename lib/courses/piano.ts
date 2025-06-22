@@ -1,85 +1,83 @@
 import type { Course } from "./types"
 
 export const piano: Course = {
-  id: "piano",
-  title: "Piano & Keyboard",
-  slug: "piano",
+  id: "learn-piano-plotit",
+  title: "Learn Piano, Musical Keyboard from Scratch",
+  slug: "learn-piano-plotit",
   category: "Music",
   color: "bg-orange-400",
   description:
-    "Learn to play piano and keyboard from scratch. This course covers music theory, technique, and repertoire for beginners to intermediate players.",
+    "A beginner-friendly course covering piano basics, music theory, playing techniques, and practice methods—with lifetime access and one-on-one support options.",
   features: [
-    "Piano technique and posture",
-    "Music theory and notation",
-    "Scales, chords, and arpeggios",
-    "Repertoire from various genres",
-    "Performance skills and practice methods",
+    "4.5 hours of on-demand video",
+    "18 downloadable resources",
+    "Full lifetime access on mobile & TV",
+    "Assignments & certificate",
+    "Personalized help via video calls",
   ],
-  duration: "12 weeks",
-  level: "Beginner to Intermediate",
-  image: "/placeholder.svg?height=400&width=600",
-  price: "$259",
+  duration: "≈4.5 hours", // exact total from Udemy page :contentReference[oaicite:1]{index=1}
+  level: "Beginner",
+  image: "/placeholder.svg?height=400&width=600", // replace with official thumbnail if available
+  price: "₹589 (82% off)", // typical Udemy sale price; update as appropriate
+  link:
+    "https://www.udemy.com/course/learnpiano/?couponCode=ST16MT230625G1",
   curriculum: [
     {
       id: 1,
-      title: "Piano Fundamentals",
+      title: "Introduction & Basics",
       items: [
         {
           id: 1,
-          title: "Introduction to the Piano",
-          description: "Understanding the instrument and proper posture",
-          duration: "25 min",
-          hasVideo: true,
-        },
-        {
-          id: 2,
-          title: "Basic Music Notation",
-          description: "Reading notes and rhythms",
-          duration: "35 min",
+          title: "Getting Started",
+          description:
+            "Welcome message, course goals, and introducing piano basics",
+          duration: "10 min",
           hasVideo: true,
         },
       ],
     },
     {
       id: 2,
-      title: "Playing Techniques",
+      title: "Piano Basics",
       items: [
         {
           id: 1,
-          title: "Finger Exercises",
-          description: "Developing finger strength and independence",
-          duration: "30 min",
+          title: "Posture & Technique",
+          description: "Proper sitting position and hand technique",
+          duration: "20 min",
           hasVideo: true,
         },
         {
           id: 2,
-          title: "Scales and Chords",
-          description: "Basic scales and chord progressions",
-          duration: "40 min",
+          title: "Reading Notes & Keyboard Layout",
+          description:
+            "Learning notes, octaves, and basic music notation",
+          duration: "30 min",
           hasVideo: true,
         },
       ],
     },
     {
       id: 3,
-      title: "Repertoire and Performance",
+      title: "Practice, Songs & Support",
       items: [
         {
           id: 1,
-          title: "Beginning Pieces",
-          description: "Simple songs for beginners",
-          duration: "45 min",
+          title: "First Songs & Practice Tips",
+          description:
+            "Beginner pieces and techniques to build practice habits",
+          duration: "30 min",
           hasVideo: true,
         },
         {
           id: 2,
-          title: "Performance Techniques",
-          description: "Expressing yourself through music",
-          duration: "35 min",
+          title: "Assignments & One-on-One Help",
+          description:
+            "Exercises and option for personal video call support",
+          duration: "15 min",
           hasVideo: true,
         },
       ],
     },
   ],
 }
-

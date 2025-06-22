@@ -76,22 +76,22 @@ export default function EnglishGrammarPage() {
                   </div>
                   <div className="flex items-center gap-2 transition-transform duration-300 hover:translate-y-[-2px]">
                     <Users className="h-5 w-5 text-blue-400" />
-                    <span>1,450+ Students</span>
+                    <span>125+ Students</span>
                   </div>
                   <div className="flex items-center gap-2 transition-transform duration-300 hover:translate-y-[-2px]">
                     <Star className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                    <span>5.0/5 (156 reviews)</span>
+                    <span>4.6/5 (156 reviews)</span>
                   </div>
                 </div>
 
                 {/* Prominent Enrollment Button */}
-                <div className="flex flex-col sm:flex-row gap-4 items-center">
-                  <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-6 h-auto text-lg w-full sm:w-auto relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
-                    <span className="relative z-10">Enroll Now for {course.price}</span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
-                  </Button>
-                  <span className="text-gray-400 animate-pulse-soft">30-Day Money-Back Guarantee</span>
-                </div>
+                <Link href={course.link} target="_blank">
+  <Button className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-6 h-auto text-lg relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+    <span className="relative z-10">Enroll Now for {course.price}</span>
+    <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
+  </Button>
+</Link>
+
               </div>
 
               <div
@@ -158,21 +158,24 @@ export default function EnglishGrammarPage() {
                     <span>English</span>
                   </div>
                 </div>
-
+                <Link href={`${course.link}/learn/lecture/1`} target="_blank">
                 <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white mb-4 relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                   <span className="relative z-10">Enroll Now</span>
                   <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
                 </Button>
+                </Link>
 
-                <Button
-                  variant="outline"
-                  className="w-full group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
-                >
-                  <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-                    Try Free Preview
-                  </span>
-                  <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
-                </Button>
+                <Link href={`${course.link}/learn/lecture/1`} target="_blank">
+  <Button
+    variant="outline"
+    className="w-full group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
+  >
+    <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+      Try Free Preview
+    </span>
+    <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
+  </Button>
+</Link>
 
                 <p className="text-center text-sm text-gray-400 mt-4">
                   Have questions?{" "}

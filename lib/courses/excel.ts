@@ -2,23 +2,25 @@ import type { Course } from "./types"
 
 export const excel: Course = {
   id: "excel",
-  title: "MS Office 365 Excel - MY",
+  title: "Mastering Microsoft Excel (Malayalam)",
   slug: "excel",
   category: "Productivity",
   color: "bg-green-500",
   description:
-    "Become an Excel power user with our comprehensive course. Learn formulas, functions, data analysis, and visualization techniques.",
+    "Learn Microsoft Excel in Malayalam—from basics to advanced—covering formulas, functions, charts, PivotTables, data entry, automation, and real-world practice, with lifetime access and certificate.",
   features: [
-    "Formulas and functions",
-    "Data analysis and PivotTables",
-    "Charts and data visualization",
-    "Macros and VBA basics",
-    "Financial modeling",
+    "Formulas & functions (SUM, IF, VLOOKUP, etc.)",
+    "PivotTables & charts for data analysis",
+    "Data entry, formatting & validation",
+    "Introduction to Macros & automation",
+    "Real-world examples & downloadable files",
   ],
-  duration: "6 weeks",
+  duration: "≈4 hours", 
   level: "Beginner to Advanced",
   image: "/placeholder.svg?height=400&width=600",
-  price: "$169",
+  price: "₹479 (77% off)", 
+  link:
+    "https://www.udemy.com/course/plotit_excel/?couponCode=ST16MT230625G1",
   curriculum: [
     {
       id: 1,
@@ -27,14 +29,14 @@ export const excel: Course = {
         {
           id: 1,
           title: "Getting Started with Excel",
-          description: "Interface overview and basic operations",
+          description: "Interface overview, cell entry, basic formatting",
           duration: "25 min",
           hasVideo: true,
         },
         {
           id: 2,
-          title: "Data Entry and Formatting",
-          description: "Working with cells and formatting options",
+          title: "Data Entry & Formatting",
+          description: "Cells, rows/columns, number formats & styles",
           duration: "30 min",
           hasVideo: true,
         },
@@ -42,19 +44,19 @@ export const excel: Course = {
     },
     {
       id: 2,
-      title: "Formulas and Functions",
+      title: "Formulas & Functions",
       items: [
         {
           id: 1,
           title: "Basic Formulas",
-          description: "Creating calculations in Excel",
+          description: "SUM, AVERAGE, COUNT, MIN/MAX, relative & absolute references",
           duration: "35 min",
           hasVideo: true,
         },
         {
           id: 2,
           title: "Advanced Functions",
-          description: "VLOOKUP, IF, and other powerful functions",
+          description: "VLOOKUP, IF, COUNTIF, SUMIF, and date functions",
           duration: "40 min",
           hasVideo: true,
         },
@@ -62,19 +64,19 @@ export const excel: Course = {
     },
     {
       id: 3,
-      title: "Data Analysis",
+      title: "Data Analysis & Visualization",
       items: [
         {
           id: 1,
           title: "PivotTables",
-          description: "Analyzing data with PivotTables",
+          description: "Creating and customizing PivotTables for insights",
           duration: "45 min",
           hasVideo: true,
         },
         {
           id: 2,
-          title: "Charts and Visualizations",
-          description: "Creating effective data visualizations",
+          title: "Charts & Visualizations",
+          description: "Building charts and formatting for clear data visuals",
           duration: "35 min",
           hasVideo: true,
         },
@@ -82,4 +84,3 @@ export const excel: Course = {
     },
   ],
 }
-

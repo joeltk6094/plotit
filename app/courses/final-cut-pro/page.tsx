@@ -85,13 +85,18 @@ export default function FinalCutProPage() {
                 </div>
 
                 {/* Prominent Enrollment Button */}
-                <div className="flex flex-col sm:flex-row gap-4 items-center">
-                  <Button className="bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white px-8 py-6 h-auto text-lg w-full sm:w-auto relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
+                <Button asChild>
+                  <a
+                    href={course.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white px-8 py-6 h-auto text-lg w-full sm:w-auto relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20"
+                  >
                     <span className="relative z-10">Enroll Now for {course.price}</span>
                     <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-orange-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
-                  </Button>
-                  <span className="text-gray-400 animate-pulse-soft">30-Day Money-Back Guarantee</span>
-                </div>
+                  </a>
+                </Button>
+
               </div>
 
               <div
@@ -159,10 +164,17 @@ export default function FinalCutProPage() {
                   </div>
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white mb-4 relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
-                  <span className="relative z-10">Enroll Now</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-orange-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
+                <Button asChild className="w-full bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white mb-4 relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
+                  <a
+                    href={course.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="relative z-10">Enroll Now</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-orange-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
+                  </a>
                 </Button>
+
 
                 <Button
                   variant="outline"

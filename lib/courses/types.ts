@@ -25,5 +25,6 @@ export type Course = {
   image: string
   price?: string
   curriculum: CourseSection[]
+  link: string
 }
 

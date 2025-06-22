@@ -1,106 +1,52 @@
 import type { Course } from "./types"
 
 export const englishGrammar: Course = {
-  id: "english-grammar",
-  title: "English Grammar",
-  slug: "english-grammar",
+  id: "english-grammar-ml",
+  title: "ഇംഗ്ലീഷ് ഗ്രാമർ (English Grammar–Malayalam)",
+  slug: "english-grammar-ml",
   category: "Language",
   color: "bg-blue-400",
   description:
-    "Build a strong foundation in English grammar with our comprehensive course. Perfect for students looking to improve their writing and speaking skills.",
+    "A Malayalam‑language introduction to English grammar—covering parts of speech, basic tenses, with practical everyday examples, quizzes and downloadable notes. Perfect for beginners aiming to improve speaking and writing in English.",
   features: [
-    "Parts of speech and sentence structure",
-    "Verb tenses and usage",
-    "Punctuation and capitalization",
-    "Common grammatical errors",
-    "Academic writing skills",
+    "Taught in Malayalam by Paul Plotit",
+    "Covers parts of speech & basic English tenses",
+    "500+ daily conversational examples",
+    "Quiz exercises included",
+    "Lifetime access & certificate of completion",
   ],
-  duration: "12 weeks",
-  level: "All Levels",
-  image: "/placeholder.svg?height=400&width=600",
-  price: "$199",
+  duration: "≈4 hours",          // total video: ~3 h 50 min :contentReference[oaicite:1]{index=1}
+  level: "Level 1 (Beginner)",   // from “Level 1” :contentReference[oaicite:2]{index=2}
+  image: "/placeholder.svg?height=400&width=600", // replace when you have official thumbnail
+  price: "₹479 (77% off)",  // current sale price :contentReference[oaicite:3]{index=3}
+  link:
+    "https://www.udemy.com/course/plotitenglishgrammar/?couponCode=ST16MT230625G1",
   curriculum: [
     {
       id: 1,
-      title: "Fundamentals of English Grammar",
+      title: "Introduction",
       items: [
         {
           id: 1,
           title: "Parts of Speech",
-          description: "Nouns, verbs, adjectives, and adverbs",
-          duration: "30 min",
-          hasVideo: true,
-        },
-        {
-          id: 2,
-          title: "Sentence Structure",
-          description: "Building effective sentences",
-          duration: "25 min",
-          hasVideo: true,
-        },
-        {
-          id: 3,
-          title: "Subject-Verb Agreement",
-          description: "Ensuring proper agreement in your writing",
-          duration: "20 min",
+          description: "Introduction to eight parts of speech in English",
+          duration: "~1 h 40 min", // from section details :contentReference[oaicite:4]{index=4}
           hasVideo: true,
         },
       ],
     },
     {
       id: 2,
-      title: "Verb Tenses and Forms",
+      title: "Tenses",
       items: [
         {
           id: 1,
-          title: "Present Tenses",
-          description: "Simple, continuous, and perfect forms",
-          duration: "35 min",
-          hasVideo: true,
-        },
-        {
-          id: 2,
-          title: "Past Tenses",
-          description: "Simple, continuous, and perfect forms",
-          duration: "35 min",
-          hasVideo: true,
-        },
-        {
-          id: 3,
-          title: "Future Tenses",
-          description: "Different ways to express future actions",
-          duration: "30 min",
-          hasVideo: true,
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Punctuation and Writing",
-      items: [
-        {
-          id: 1,
-          title: "Commas, Semicolons, and Colons",
-          description: "Using punctuation effectively",
-          duration: "25 min",
-          hasVideo: true,
-        },
-        {
-          id: 2,
-          title: "Quotation Marks and Apostrophes",
-          description: "Proper usage in writing",
-          duration: "20 min",
-          hasVideo: true,
-        },
-        {
-          id: 3,
-          title: "Common Writing Mistakes",
-          description: "Avoiding frequent grammatical errors",
-          duration: "30 min",
+          title: "Present, Past & Future Tenses",
+          description: "Basic forms of English tenses (simple, continuous, perfect)",
+          duration: "≈1 h", 
           hasVideo: true,
         },
       ],
     },
   ],
 }
-

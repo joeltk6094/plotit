@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -12,20 +12,21 @@ import Header from "@/components/header"
 import { getCourseBySlug } from "@/lib/courses"
 import type { Course } from "@/lib/courses"
 
-export default function CoursePage({ params }: { params: { slug: string } }) {
+export default function CoursePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params)
   const [course, setCourse] = useState<Course | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-    const foundCourse = getCourseBySlug(params.slug)
+    const foundCourse = getCourseBySlug(slug)
     if (!foundCourse) {
       notFound()
     }
     setCourse(foundCourse)
     setIsLoading(false)
-  }, [params.slug])
+  }, [slug])
 
   // Prevent hydration issues by only rendering client-specific content after mounting
   if (!mounted) {
