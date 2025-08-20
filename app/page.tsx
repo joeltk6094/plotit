@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,249 +10,132 @@ import {
   Zap,
   Plus,
   Heart,
+  Globe,
+  MessageCircleMore,
 } from "lucide-react";
 import Header from "@/components/header";
 import KidsEducationSection from "@/components/kids-education-section";
 import PopularCourses from "@/components/popular-courses";
 import { routes } from "@/lib/routes";
+import { useState } from "react";
 
+import { Menu, X, BookOpen, Users, Award } from "lucide-react"
+import { Button } from "@/components/ui/button";
 export default function Home() {
+  
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
+     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-teal-900 text-white font-sans">
       {/* Header */}
       <Header />
 
-      {/* Main Content */}
-      <main>
-        {/* Hero Section */}
-        <section className="responsive-container py-8 md:py-12 lg:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div className="lg:col-span-2 min-h-screen">
-              <h1 className="text-fluid-5xl font-bold leading-tight mb-6 md:mb-8 lg:mb-10">
-                Where Knowledge{" "}
-                <span className="inline-flex items-center">
-                  <span className="inline-block w-12 h-12 bg-pink-300 rounded-full mx-2"></span>
-                </span>{" "}
-                Meets,
-                <br />
-                Skills{" "}
-                <span className="inline-flex items-center">
-                  <span className="inline-block w-12 h-12 bg-yellow-300 rounded-full mx-2 rotate-45"></span>
-                </span>{" "}
-                Evolve
-              </h1>
+      {/* Hero Section */}
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 lg:pt-32 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6">
+          Master New Skills<br />
+          with <span className="text-teal-400">Online</span> Courses
+        </h1>
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-4 leading-relaxed px-2">
+          Learn at your pace, from the best instructors, and earn certificates that matter.
+        </p>
+        <p className="text-gray-400 text-sm mb-8">10,000+ students already learning with PLOTIT</p>
+        <Button  className="bg-white text-black hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center gap-2 transition-all duration-300 hover:scale-105">
+          Explore Courses
+          <ArrowRight className="h-5 w-5" />
+        </Button>
 
-              <div className="mt-8">
-                <p className="text-gray-400 text-fluid-lg">
-                  From <span className="text-white">Learning</span> to{" "}
-                  <span className="text-white">Mastering</span>
-                </p>
-              </div>
+        <div className="relative max-w-5xl mx-auto mt-12">
+          <div className="bg-gray-900/80 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300">
+            <img
+              src="/46836.jpg"
+              alt="PLOTIT Course Dashboard Preview"
+              className="w-full h-64 md:h-96 object-cover"
+            />
+          </div>
+        </div>
+      </section>
 
-              <div className="mt-8">
-                <Link
-                  href={routes.courses.index}
-                  className="px-6 py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full font-medium text-fluid-base text-white hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300 inline-flex items-center gap-2"
-                >
-                  Explore Courses
-                  <ArrowRight className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-end justify-start">
-              <div className="flex gap-2 md:gap-3 lg:gap-4 mb-4 md:mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-pink-300 rounded-full flex items-center justify-center">
-                  <FileText
-                    size={20}
-                    className="md:h-6 md:w-6 lg:h-8 lg:w-8 text-black"
-                  />
-                </div>
-                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-gray-200 rounded-full flex items-center justify-center">
-                  <Zap
-                    size={20}
-                    className="md:h-6 md:w-6 lg:h-8 lg:w-8 text-black"
-                  />
-                </div>
-                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-gray-300 rounded-full flex items-center justify-center">
-                  <Clock
-                    size={20}
-                    className="md:h-6 md:w-6 lg:h-8 lg:w-8 text-black"
-                  />
-                </div>
-              </div>
-
-              <div className="text-right">
-                <p className="font-medium text-fluid-lg">
-                  Discover, Learn, Excel:
-                </p>
-                <p className="font-medium text-fluid-lg">The Plotit Way!</p>
-              </div>
-            </div>
+      {/* Features Section */}
+      <section id="courses" className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Why Choose PLOTIT?</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Everything you need to master new skills and advance your knowledge
+            </p>
           </div>
 
-          {/* Cards Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10 mt-12 md:mt-16 lg:mt-20">
-            {/* Teacher Card */}
-            <div className="lg:col-span-3 bg-pink-200 rounded-3xl p-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 left-0 h-full">
-                <svg
-                  viewBox="0 0 200 200"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute top-0 right-0 w-full h-full text-red-400 opacity-20"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M44.9,-76.2C59.7,-69.7,74.4,-60.4,81.9,-46.6C89.4,-32.8,89.7,-14.4,85.8,1.9C82,18.2,74,32.4,64.4,44.7C54.8,57,43.6,67.5,30.2,73.2C16.8,78.9,1.2,79.8,-14.4,77.3C-30,74.8,-45.6,68.9,-58.3,58.7C-71,48.5,-80.8,34,-85.2,17.8C-89.6,1.6,-88.6,-16.3,-81.9,-31.1C-75.2,-45.9,-62.8,-57.6,-48.6,-64.2C-34.4,-70.8,-18.4,-72.3,-1.9,-69.3C14.6,-66.3,30.1,-82.7,44.9,-76.2Z"
-                    transform="translate(100 100)"
-                  />
-                </svg>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="text-center p-8 rounded-lg bg-gray-800/40 backdrop-blur-sm border border-gray-700 hover:bg-gray-800/50 transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="h-8 w-8 text-teal-400" />
               </div>
-
-              <div className="flex items-center gap-3 mb-6 relative z-10">
-                <div className="w-12 h-12 bg-white rounded-full overflow-hidden flex items-center justify-center">
-                  <div className="w-10 h-10 bg-yellow-400 rounded-full"></div>
-                </div>
-                <div>
-                  <div className="font-bold text-black text-sm">
-                    Best Teacher
-                  </div>
-                  <div className="text-black text-xs">Of The Year</div>
-                </div>
-                <div className="ml-auto">
-                  <ArrowRight size={16} className="text-black" />
-                </div>
-              </div>
-
-              <div className="absolute top-4 right-4 z-10">
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <Bell size={16} className="text-black" />
-                </div>
-              </div>
-
-              <div className="mt-auto relative z-10">
-                <h3 className="text-black text-xl md:text-2xl lg:text-fluid-2xl font-bold mb-2 md:mb-3">
-                  Expert Instructors Guiding Your Learning Journey!
-                </h3>
-                <p className="text-black text-sm md:text-base lg:text-fluid-base">
-                  Dedicated mentors across IT, languages, music, and more
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold mb-2">Diverse Courses</h3>
+              <p className="text-gray-300">
+                50+ courses from English, Music, Coding & Productivity to boost your skills
+              </p>
             </div>
 
-            {/* Main Feature Card */}
-            <div className="lg:col-span-6 bg-white rounded-3xl overflow-hidden">
-              <div className="p-6 text-black">
-                <div className="flex justify-between items-center mb-4">
-                  <div className="text-gray-500 text-sm">
-                    &lt;&lt; About &gt;&gt;
-                  </div>
-                  <div className="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center">
-                    <FileText size={16} className="text-gray-500" />
-                  </div>
-                </div>
-
-                <h2 className="text-2xl md:text-3xl lg:text-fluid-3xl font-bold mb-4 md:mb-6">
-                  Diverse Learning Paths
-                  <br />
-                  For Every Passion
-                </h2>
-
-                <div className="flex gap-2">
-                  <div className="px-4 py-1 border border-gray-300 rounded-full text-sm">
-                    Popular
-                  </div>
-                  <Link
-                    href={routes.courses.index}
-                    className="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300"
-                  >
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
+            {/* Card 2 */}
+            <div className="text-center p-8 rounded-lg bg-gray-800/40 backdrop-blur-sm border border-gray-700 hover:bg-gray-800/50 transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-teal-400" />
               </div>
-
-              <div className="h-64 bg-gradient-to-r from-orange-400 to-pink-400 relative">
-                <Image
-                  src="/placeholder.svg?height=300&width=600"
-                  alt="Students learning various subjects"
-                  width={600}
-                  height={300}
-                  className="w-full h-full object-cover"
-                />
-
-                <div className="absolute bottom-4 left-4 flex gap-2">
-                  <button className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-opacity duration-300">
-                    <MessageCircle size={16} className="text-gray-700" />
-                  </button>
-                  <button className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-opacity duration-300">
-                    <FileText size={16} className="text-gray-700" />
-                  </button>
-                  <button className="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-opacity duration-300">
-                    <Zap size={16} className="text-gray-700" />
-                  </button>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold mb-2">Expert Instructors</h3>
+              <p className="text-gray-300">
+                Learn from top professionals passionate about teaching and mentoring
+              </p>
             </div>
 
-            <div className="lg:col-span-3 flex flex-col gap-4">
-              <div className="flex items-center gap-2">
-                <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
-                  <Plus size={16} className="text-black" />
-                </button>
-                <Link
-                  href={routes.courses.index}
-                  className="px-4 py-1 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-300"
-                >
-                  Explore Courses
-                </Link>
+            {/* Card 3 */}
+            <div className="text-center p-8 rounded-lg bg-gray-800/40 backdrop-blur-sm border border-gray-700 hover:bg-gray-800/50 transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-teal-400" />
               </div>
-
-              <div className="bg-green-100 rounded-3xl p-6 flex-1 relative">
-                <div className="flex justify-between items-center mb-8">
-                  <h3 className="text-black font-bold text-lg md:text-xl lg:text-fluid-xl">
-                    Smart Academy
-                  </h3>
-                  <button className="w-6 h-6 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
-                    <Heart size={14} className="text-black" />
-                  </button>
-                </div>
-
-                <div className="relative h-40">
-                  <div className="absolute bottom-0 left-0 w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-black text-xs font-medium">IT</span>
-                  </div>
-
-                  <div className="absolute bottom-12 left-16 w-20 h-20 bg-yellow-200 rounded-full flex items-center justify-center">
-                    <span className="text-black text-xs font-medium rotate-45">
-                      Language
-                    </span>
-                  </div>
-
-                  <div className="absolute bottom-4 right-0 w-20 h-20 bg-blue-200 rounded-full flex items-center justify-center">
-                    <span className="text-black text-xs font-medium -rotate-45">
-                      Music
-                    </span>
-                  </div>
-
-                  <div className="absolute top-0 right-8 w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center">
-                    <span className="text-black text-xs font-medium">
-                      Software
-                    </span>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-4 right-4">
-                  <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300">
-                    <MessageCircle size={16} className="text-black" />
-                  </button>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold mb-2">Certified Learning</h3>
+              <p className="text-gray-300">
+                Earn certificates to showcase your skills and boost your career prospects
+              </p>
             </div>
           </div>
-        </section>
-        <KidsEducationSection />
-        <PopularCourses />
-      </main>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-16 md:py-24 bg-gray-900/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">What Our Students Say</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Real feedback from learners who transformed their skills
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 rounded-lg bg-gray-800/40 border border-gray-700 text-gray-300 hover:scale-105 transition-all duration-300">
+              <p>"The English course improved my confidence drastically!"</p>
+              <p className="mt-4 font-semibold text-teal-400">– Rahul S.</p>
+            </div>
+            <div className="p-6 rounded-lg bg-gray-800/40 border border-gray-700 text-gray-300 hover:scale-105 transition-all duration-300">
+              <p>"I finally learned piano online without leaving my home!"</p>
+              <p className="mt-4 font-semibold text-teal-400">– Priya M.</p>
+            </div>
+            <div className="p-6 rounded-lg bg-gray-800/40 border border-gray-700 text-gray-300 hover:scale-105 transition-all duration-300">
+              <p>"Great instructors and hands-on exercises. Loved it!"</p>
+              <p className="mt-4 font-semibold text-teal-400">– Aman K.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Footer */}
+      <section className="py-16 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Learning?</h2>
+        <Button className="bg-teal-400 text-black hover:bg-teal-500 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center gap-2 transition-all duration-300 hover:scale-105">
+          Explore Courses
+          <ArrowRight className="h-5 w-5" />
+        </Button>
+      </section>
     </div>
   );
 }
