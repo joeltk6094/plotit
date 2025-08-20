@@ -39,10 +39,14 @@ export default function Home() {
           Learn at your pace, from the best instructors, and earn certificates that matter.
         </p>
         <p className="text-gray-400 text-sm mb-8">10,000+ students already learning with PLOTIT</p>
-        <Button  className="bg-white text-black hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center gap-2 transition-all duration-300 hover:scale-105">
-          Explore Courses
-          <ArrowRight className="h-5 w-5" />
-        </Button>
+        <Link href={routes.courses.index} passHref>
+          <Button
+            className="bg-white text-black hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+          >
+            Explore Courses
+            <ArrowRight className="h-5 w-5" />
+          </Button>
+        </Link>
 
         <div className="relative max-w-5xl mx-auto mt-12">
           <div className="bg-gray-900/80 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300">
@@ -131,10 +135,12 @@ export default function Home() {
       {/* CTA Footer */}
       <section className="py-16 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Learning?</h2>
-        <Button className="bg-teal-400 text-black hover:bg-teal-500 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center gap-2 transition-all duration-300 hover:scale-105">
-          Explore Courses
-          <ArrowRight className="h-5 w-5" />
-        </Button>
+         <Link href={routes.courses.index} passHref>
+           <Button className="bg-teal-400 text-black hover:bg-teal-500 px-8 py-4 text-lg font-medium rounded-full inline-flex items-center gap-2 transition-all duration-300 hover:scale-105">
+             Explore Courses
+             <ArrowRight className="h-5 w-5" />
+           </Button>
+         </Link>
       </section>
     </div>
   );

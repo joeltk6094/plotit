@@ -165,14 +165,14 @@ export default function FinalCutProPage() {
                 </div>
 
                 <Button asChild className="w-full bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white mb-4 relative overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
-                  <a
+                  <Link
                     href={course.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <span className="relative z-10">Enroll Now</span>
                     <span className="absolute inset-0 bg-gradient-to-r from-pink-600 to-orange-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
-                  </a>
+                  </Link>
                 </Button>
 
 
